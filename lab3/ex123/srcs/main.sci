@@ -2,10 +2,12 @@ clc;
 clear;
 
 // Save Console output
-diary("C:/LAB_DSP_HK21/lab3/ex123/console/ex1.txt");
+diary("C:/LAB_DSP_HK21/lab3/ex123/console_output.txt");
 
 // Load functions
 exec("C:\LAB_DSP_HK21\lab3\ex123\srcs\ex1.sci", -1);
+exec("C:\LAB_DSP_HK21\lab3\ex123\srcs\ex2.sci", -1);
+exec("C:\LAB_DSP_HK21\lab3\ex123\srcs\ex3.sci", -1);
 
 // Input signal
 xn = [1 -2 3 6];
@@ -14,6 +16,14 @@ xorigin = 3;
 // Exercise 1
 disp("Exercise 1");
 [y1, o1] = delay(xn, xorigin, 1);
+
+// Exercise 2
+disp("Exercise 2");
+[y2, o2] = advance(xn, xorigin, 1);
+
+// Exercise 3
+disp("Exercise 3");
+[y3, o3] = fold(xn, xorigin);
 
 // Stop saving Console
 diary(0);
