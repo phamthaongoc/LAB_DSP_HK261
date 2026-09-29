@@ -1,0 +1,5 @@
+  "Exercise 3"
+  "yn = "
+   6.   3.  -2.   1.
+  "yorigin = "
+   2.
